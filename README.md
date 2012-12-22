@@ -30,13 +30,13 @@ Modules website:
 
 # Usage
 
-Add recipe[modules::source] to your run list.
+Add recipe[modules::default] to your run list.
 
 # Attributes
 
 # Recipes
 
-  * recipe[modules::default] - Does nothing for now
+  * recipe[modules::default] - Provides the modulefile resource
   * recipe[modules::source] - Downloads, builds and installs environment modules from
     sourceforge.
 
