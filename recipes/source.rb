@@ -26,7 +26,12 @@ ark "modules" do
   prefix_root Chef::Config.file_cache_path
   url "http://downloads.sourceforge.net/project/modules/Modules/modules-3.2.10/modules-3.2.10.tar.bz2"
   version "3.2.10"
-  action [:configure, :install_with_make]
+  action :install_with_make
   autoconf_opts %w(--disable-versioning --disable-use-default)
   make_opts %w(-j 2)
+end.run_action(:configure)
+
+modules = resources("ark[modules]")
+link modules.home_dir do
+  action :delete
 end
