@@ -27,7 +27,6 @@ ark "modules" do
   url "http://downloads.sourceforge.net/project/modules/Modules/modules-3.2.10/modules-3.2.10.tar.bz2"
   version "3.2.10"
   action :install_with_make
-  autoconf_opts %w(--disable-versioning --disable-use-default)
   make_opts %w(-j 2)
 end.run_action(:configure)
 
