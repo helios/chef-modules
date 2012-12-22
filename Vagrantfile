@@ -15,5 +15,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "minitest-handler"
     chef.add_recipe "modules::default"
     chef.add_recipe "modules::source"
+    chef.add_recipe "modules::_default_test"
   end
 end

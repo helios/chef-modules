@@ -40,6 +40,12 @@ Add recipe[modules::source] to your run list.
   * recipe[modules::source] - Downloads, builds and installs environment modules from
     sourceforge.
 
+# Resources/Providers
+
+## modulefile
+
+Creates a modulefile(5)
+
 # Author
 
 Author:: Allan Espinosa (<allan.espinosa@outlook.com>)
