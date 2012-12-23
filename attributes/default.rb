@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: modules
-# Provider:: modulefile
+# Attribute:: default
 #
 # Copyright (C) 2012 Allan Espinosa
 # 
@@ -17,10 +17,4 @@
 # limitations under the License.
 #
 
-def load_current_resource
-  @current_resource = Chef::Resource::ModulesModulefile.new(new_resource.name)
-end
-
-action :create do
-  file ::File.join(node['modules']['module_path'], new_resource.name)
-end
+default['modules']['module_path'] = '/usr/local/Modules/modulefiles'

@@ -17,4 +17,6 @@
 # limitations under the License.
 #
 
-directory "/usr/local/Modules/modulefiles"
+directory node['modules']['module_path'] do
+  recursive true
+end

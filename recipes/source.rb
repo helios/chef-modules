@@ -28,6 +28,7 @@ ark "modules" do
   version "3.2.10"
   action :install_with_make
   make_opts %w(-j 2)
+  configure_opts ["--with-module-path=#{node['modules']['module_path']}"]
 end.run_action(:configure)
 
 modules = resources("ark[modules]")
