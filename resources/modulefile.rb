@@ -21,3 +21,6 @@ def initialize(name, run_context=nil)
   super
   @resource_name = :modulefile
 end
+
+actions :create
+default_action :create

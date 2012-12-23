@@ -20,3 +20,7 @@
 def load_current_resource
   @current_resource = Chef::Resource::ModulesModulefile.new(new_resource.name)
 end
+
+action :create do
+  file "/usr/local/Modules/modulefiles/#{new_resource.name}"
+end
